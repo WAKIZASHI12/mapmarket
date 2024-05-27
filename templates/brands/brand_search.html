@@ -1,0 +1,17 @@
+<!-- brands/templates/brands/brand_search.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Brand Location</title>
+</head>
+<body>
+    <h1>Search for a Brand</h1>
+    <form method="post" action="{% url 'brand_location' %}">
+        {% csrf_token %}
+        <label for="brand_name">Enter Brand Name:</label>
+        <input type="text" id="brand_name" name="brand_name" required>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
